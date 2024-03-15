@@ -31,6 +31,18 @@ RUN apt-get update \
       libfreetype6-dev \
       libjpeg62-turbo-dev \
       libwebp-dev \
+    && docker-php-ext-install \
+      intl \
+      mbstring \
+      pdo_sqlite \
+      pdo_mysql \
+      pdo_pgsql \
+      soap \
+      xml \
+      mysqli \
+      gettext \
+      zip \
+      sockets \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
