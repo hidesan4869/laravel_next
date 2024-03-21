@@ -32,8 +32,11 @@ $ sh generate_env.sh
 $ cat .env
 ENV=local
 TZ=Asia/Tokyo
-NGINX_FRONT_PORT=10088
-NGINX_SERVER_PORT=13000
+NGINX_FRONT_PORT=8001
+NGINX_SERVER_PORT=8002
+NODE_SERVER_PORT=80
+PMA_PORT=8003
+MAILHOG_PORT=8025
 MYSQL_PORT=13306
 MYSQL_DATABASE=db
 MYSQL_USER=db
@@ -73,3 +76,5 @@ $ sh initialize_laravel.sh
 ```bash
 $ sh initialize_next.sh
 ```
+#### Git
+The Git mount point is set directly under /var/www/ for both the php and node services.

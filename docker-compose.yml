@@ -25,6 +25,7 @@ services:
       - mysql
     volumes:
       - ./src/server:/var/www/server
+      - ./.git:/var/www/.git
     container_name: wdr_php_local
   node:
     build:
@@ -36,6 +37,7 @@ services:
       - "${NODE_SERVER_PORT}:3000"
     volumes:
       - ./src/front:/var/www/front
+      - ./.git:/var/www/.git
     container_name: wdr_node_local
   mysql:
     image: mysql:8.0
