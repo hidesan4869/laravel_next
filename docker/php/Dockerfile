@@ -6,6 +6,13 @@ ENV PATH="/usr/local/bin/php:${PATH}"
 
 # Composerのインストール
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+# Node.jsのセットアップスクリプトを実行
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+    apt-get update && \
+    apt-get install -y nodejs=18.17.0-*
+
+# 作業ディレクトリを設定
+WORKDIR /var/www/server
 
 # 必要なパッケージのインストール
 RUN apt-get update \
