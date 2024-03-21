@@ -12,7 +12,7 @@ export default function Home() {
 }
 
 const TestButton = () => {
-    return <button className='test-button' onClick={ GetRequest } data-url='http://localhost:13000/api/test'>GET</button>
+    return <button className='test-button' onClick={ GetRequest } data-url='http://localhost:13000/api/test'>GET start</button>
 }
 
 async function GetRequest(e: React.MouseEvent) {
