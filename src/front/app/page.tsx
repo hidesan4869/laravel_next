@@ -1,4 +1,5 @@
 'use client';
+import axios from "axios";
 
 let result: string = 'none';
 
@@ -12,7 +13,11 @@ export default function Home() {
 }
 
 const TestButton = () => {
-    return <button className='test-button' onClick={ GetRequest } data-url='http://localhost:13000/api/test'>GET</button>
+    const handleClick = async () => {
+        await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/test`);
+    }
+
+    return <button className='test-button' onClick={handleClick}>GET</button>
 }
 
 async function GetRequest(e: React.MouseEvent) {

@@ -1,8 +1,13 @@
-FROM node:18.17.0
+FROM node:18.17.0-alpine
 
-RUN echo "alias ll='ls -la'" >> ~/.bashrc
+# bashのインストール
+RUN apk add --no-cache bash
 
+# startup.shスクリプトをコピー
 COPY startup.sh /opt/startup.sh
+
+# 実行権限を付与
 RUN chmod +x /opt/startup.sh
 
-CMD ["/bin/bash", "/opt/startup.sh"]
+# CMDを修正
+CMD ["/opt/startup.sh"]

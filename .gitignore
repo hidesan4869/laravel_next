@@ -3,3 +3,6 @@
 !src/server/.gitkeep
 # src/front/**/*
 !src/front/.gitkeep
+docker/php/.*
+docker/node/.*
+docker/nginx/.*
