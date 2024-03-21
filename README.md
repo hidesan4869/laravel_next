@@ -78,3 +78,22 @@ $ sh initialize_next.sh
 ```
 #### Git
 The Git mount point is set directly under /var/www/ for both the php and node services.
+
+### Issues
+
+If there's an error during package installation from deb.debian.org, it could be due to DNS resolution issues. Therefore, please add the IP address of deb.debian.org to the DNS of the host machine.
+
+#### Check DNS
+```
+dig deb.debian.org
+```
+
+#### Used WSL
+```
+touch /etc/docker/daemon.json
+
+sudo vim /etc/docker/daemon.json
+{
+    "dns": ["151.101.90.132", "8.8.8.8"]
+}
+```
