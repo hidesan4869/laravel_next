@@ -1,0 +1,178 @@
+{
+  "data": {
+    "partners": {
+      "data": [
+        {
+          "id": 1,
+          "name": "山田太郎",
+          "profile_image": "https://placehold.jp/30/e3e3e3/ffffff/200x200.png?text=山田太郎",
+          "type": "プランナー",
+          "rating": {
+            "average": 4.5,
+            "count": 30
+          },
+          "quote": "お客様の特別な日を思い出に残るものにすることを心がけています。",
+          "tags": ["ウェディング", "イベント", "企画"],
+          "images": [
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真"
+          ]
+        },
+        {
+          "id": 2,
+          "name": "鈴木花子",
+          "profile_image": "https://placehold.jp/30/e3e3e3/ffffff/200x200.png?text=鈴木花子",
+          "type": "ヘアメイク",
+          "rating": {
+            "average": 4.2,
+            "count": 25
+          },
+          "quote": "美しいヘアスタイルとメイクで、お客様を輝かせます。",
+          "tags": ["ブライダル", "ファッション", "撮影"],
+          "images": [
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真"
+          ]
+        },
+        {
+          "id": 3,
+          "name": "田中健太",
+          "profile_image": "https://placehold.jp/30/e3e3e3/ffffff/200x200.png?text=田中健太",
+          "type": "カメラマン",
+          "rating": {
+            "average": 4.8,
+            "count": 40
+          },
+          "quote": "瞬間を切り取り、感動を写真に残します。",
+          "tags": ["ウェディング", "ポートレート", "イベント"],
+          "images": [
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真"
+          ]
+        },
+        {
+          "id": 4,
+          "name": "佐藤美咲",
+          "profile_image": "https://placehold.jp/30/e3e3e3/ffffff/200x200.png?text=佐藤美咲",
+          "type": "ヘアメイク",
+          "rating": {
+            "average": 4.6,
+            "count": 35
+          },
+          "quote": "お客様一人一人に合ったヘアスタイルを提案します。",
+          "tags": ["ブライダル", "パーティー", "メイク"],
+          "images": [
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真"
+          ]
+        },
+        {
+          "id": 5,
+          "name": "伊藤拓也",
+          "profile_image": "https://placehold.jp/30/e3e3e3/ffffff/200x200.png?text=伊藤拓也",
+          "type": "カメラマン",
+          "rating": {
+            "average": 4.7,
+            "count": 38
+          },
+          "quote": "写真を通して、特別な瞬間をお届けします。",
+          "tags": ["ウェディング", "ポートレート", "イベント"],
+          "images": [
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真"
+          ]
+        },
+        {
+          "id": 6,
+          "name": "木村さくら",
+          "profile_image": "https://placehold.jp/30/e3e3e3/ffffff/200x200.png?text=木村さくら",
+          "type": "プランナー",
+          "rating": {
+            "average": 4.4,
+            "count": 28
+          },
+          "quote": "お客様の理想を形にします。",
+          "tags": ["ウェディング", "イベント", "企画"],
+          "images": [
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真"
+          ]
+        },
+        {
+          "id": 7,
+          "name": "中村直人",
+          "profile_image": "https://placehold.jp/30/e3e3e3/ffffff/200x200.png?text=中村直人",
+          "type": "カメラマン",
+          "rating": {
+            "average": 4.9,
+            "count": 42
+          },
+          "quote": "繊細な表現で、お客様の思い出を切り取ります。",
+          "tags": ["ウェディング", "ポートレート", "イベント"],
+          "images": [
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真"
+          ]
+        },
+        {
+          "id": 8,
+          "name": "小林愛",
+          "profile_image": "https://placehold.jp/30/e3e3e3/ffffff/200x200.png?text=小林愛",
+          "type": "プランナー",
+          "rating": {
+            "average": 4.3,
+            "count": 26
+          },
+          "quote": "お客様のイメージを形にしていきます。",
+          "tags": ["ウェディング", "パーティー", "企画"],
+          "images": [
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真"
+          ]
+        },
+        {
+          "id": 9,
+          "name": "斉藤宏",
+          "profile_image": "https://placehold.jp/30/e3e3e3/ffffff/200x200.png?text=斉藤宏",
+          "type": "プランナー",
+          "rating": {
+            "average": 4.7,
+            "count": 33
+          },
+          "quote": "お客様の大切な一日を素敵に演出します。",
+          "tags": ["ウェディング", "イベント", "企画"],
+          "images": [
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真"
+          ]
+        },
+        {
+          "id": 10,
+          "name": "高橋真美",
+          "profile_image": "https://placehold.jp/30/e3e3e3/ffffff/200x200.png?text=高橋真美",
+          "type": "ヘアメイク",
+          "rating": {
+            "average": 4.5,
+            "count": 29
+          },
+          "quote": "お客様の魅力を引き出します。",
+          "tags": ["ブライダル", "ファッション", "メイク"],
+          "images": [
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真",
+            "https://placehold.jp/100/e3e3e3/ffffff/500x500.png?text=写真"
+          ]
+        }
+      ]
+    }
+  }
+}
