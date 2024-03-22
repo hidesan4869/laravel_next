@@ -10,8 +10,20 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu";
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import searchData from "@/data/search.json";
 
 export default function Header() {
   return (
@@ -21,6 +33,50 @@ export default function Header() {
           <Link href="/">
             <p className="font-bold">WDR ロゴ</p>
           </Link>
+        </div>
+        <div>
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    ホーム
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    WDRについて
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>サポーター</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid bg-white p-3 space-y-2">
+                    {searchData.data.partner_types.data.map((partner) => (
+                      <Button key={partner.id} variant="outline">{partner.name}</Button>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    コラム
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    問い合わせ
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
         </div>
         <div>
           <Dialog>

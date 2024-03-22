@@ -17,6 +17,19 @@ export default function Home() {
         />
       </div>
       <div className="max-w-6xl mx-auto space-y-10">
+        <div className="py-16">
+          <p className="text-center mb-5 text-xl">
+            一流のプロフェッショナルと一緒に
+            <br />
+            クリエイティブなウェディングを作りませんか？
+          </p>
+          <p className="text-center text-sm">
+            WDRはフリーランスで活躍する
+            <br />
+            ウェディングプランナー・クリエイターの紹介サービスです。
+          </p>
+          <Image className="mx-auto mt-10" src="/img/about.png" alt="About" width={800} height={400} />
+        </div>
         <div>
           <SearchBox />
         </div>
@@ -34,7 +47,11 @@ export default function Home() {
           <h2 className="font-bold text-xl mb-5">レポート一覧</h2>
           <div className="grid grid-cols-3 gap-5">
             {Array.from({ length: 3 }).map((_, index) => (
-              <ColumnItem key={index} imageTitle="レポート画像" column="false" />
+              <ColumnItem
+                key={index}
+                imageTitle="レポート画像"
+                column="false"
+              />
             ))}
           </div>
         </div>
