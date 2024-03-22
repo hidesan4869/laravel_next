@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import partnersData from "@/data/partners.json";
+import { Heart } from "lucide-react";
 import Image from "next/image";
 
 export default function Profile({ params }: any) {
@@ -97,43 +99,52 @@ export default function Profile({ params }: any) {
           </p>
         </div>
         <div className="col-span-3">
-          <div className="sticky top-5 border rounded-lg p-5">
-            <div className="grid grid-cols-3 gap-5">
-              <div className="col-span-1">
-                <Image
-                  src={data.profile_image}
-                  alt={data.name}
-                  width={100}
-                  height={100}
-                  quality={100}
-                  className="rounded-full overflow-hidden"
-                />
-              </div>
-              <div className="items-center flex col-span-2">
-                <div>
-                  <p className="font-bold">{data.name}</p>
-                  <p className="text-sm">{data.type}</p>
-                  <div className="flex space-x-2">
-                    <p>★★★★★ {data.rating.average}</p>
-                    <p>({data.rating.count})</p>
+          <div className="sticky top-5">
+            <div className="border rounded-lg p-5">
+              <div className="grid grid-cols-3 gap-5">
+                <div className="col-span-1">
+                  <Image
+                    src={data.profile_image}
+                    alt={data.name}
+                    width={100}
+                    height={100}
+                    quality={100}
+                    className="rounded-full overflow-hidden"
+                  />
+                </div>
+                <div className="items-center flex col-span-2">
+                  <div>
+                    <p className="font-bold">{data.name}</p>
+                    <p className="text-sm">{data.type}</p>
+                    <div className="flex space-x-2">
+                      <p>★★★★★ {data.rating.average}</p>
+                      <p>({data.rating.count})</p>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div className="mt-3 space-y-4">
+                <div>
+                  <p className="text-sm">{data.quote}</p>
+                </div>
+                <div>
+                  {data.tags.map((tag: string, index: number) => (
+                    <span
+                      key={index}
+                      className="bg-gray-200 text-gray-600 text-sm px-2 py-1 rounded-full mr-2"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
-            <div className="mt-3 space-y-4">
-              <div>
-                <p className="text-sm">{data.quote}</p>
-              </div>
-              <div>
-                {data.tags.map((tag: string, index: number) => (
-                  <span
-                    key={index}
-                    className="bg-gray-200 text-gray-600 text-sm px-2 py-1 rounded-full mr-2"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+            <div className="grid grid-cols-1 gap-2 mt-5">
+                <Button className="bg-[#06c755] hover:bg-[#06c755] hover:opacity-80">LINE</Button>
+                <Button className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 hover:opacity-80">Instagram</Button>
+                <Button variant="outline">メールで問い合わせ</Button>
+                <Button variant="outline">電話で問い合わせ</Button>
+                <Button variant="outline"><Heart className="mr-2 h-4 w-4"/>お気に入り</Button>
             </div>
           </div>
         </div>
