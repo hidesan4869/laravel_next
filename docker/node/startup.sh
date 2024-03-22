@@ -4,4 +4,4 @@ cd /var/www/front
 
 yarn
 
-yarn dev:watch
+yarn dev

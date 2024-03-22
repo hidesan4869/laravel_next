@@ -1,44 +1,40 @@
-FROM php:8.3-fpm
+FROM php:8.3-fpm-alpine3.18
 
 ENV LANG ja_JP.UTF-8
 ENV LC_ALL C
-ENV PATH="/usr/local/bin/php:${PATH}"
 
 # Composerのインストール
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-# Node.jsのセットアップスクリプトを実行
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
-    apt-get update && \
-    apt-get install -y nodejs=18.17.0-*
 
 # 作業ディレクトリを設定
 WORKDIR /var/www/server
 
 # 必要なパッケージのインストール
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
+RUN apk add --no-cache \
       sudo \
       git \
       libxml2-dev \
       unzip \
       wget \
-      zlib1g-dev \
+      zlib-dev \
       iproute2 \
-      libsqlite3-dev \
-      libpq-dev \
-      libicu-dev  \
-      gnupg2 \
-      libonig-dev \
+      sqlite-dev \
+      postgresql-dev \
+      icu-dev \
+      oniguruma-dev \
       libzip-dev \
-      libjpeg-dev \
+      jpeg-dev \
       libpng-dev \
-      zlib1g-dev \
-      libmemcached-dev \
-      libmagickwand-dev \
-      libfreetype6-dev \
-      libjpeg62-turbo-dev \
+      freetype-dev \
       libwebp-dev \
-    && docker-php-ext-install \
+      gettext-dev \
+      linux-headers \
+      nodejs \
+      npm \
+      bash
+
+# PHPの拡張機能をインストール
+RUN docker-php-ext-install \
       intl \
       mbstring \
       pdo_sqlite \
@@ -50,7 +46,9 @@ RUN apt-get update \
       gettext \
       zip \
       sockets \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    && docker-php-ext-configure gd --with-jpeg=/usr/include/ --with-freetype=/usr/include/ --with-webp=/usr/include/ \
+    && docker-php-ext-install gd
+
 RUN echo "alias ll='ls -la'" >> ~/.bashrc
-ENTRYPOINT php-fpm
+
+ENTRYPOINT ["php-fpm"]
