@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="ja">
       <body className={NotoSans.className}>
         <Header />
-        <main className="max-w-6xl mx-auto">
+        <main>
           {children}
         </main>
         <Footer />

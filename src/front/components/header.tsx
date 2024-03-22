@@ -19,7 +19,7 @@ export default function Header() {
       <div className="flex justify-between max-w-6xl mx-auto">
         <div className="my-auto">
           <Link href="/">
-            <p className="font-bold">WDR LOGO</p>
+            <p className="font-bold">WDR ロゴ</p>
           </Link>
         </div>
         <div>

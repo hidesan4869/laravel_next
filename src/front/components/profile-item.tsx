@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function ProfileItem({ data }: any) {
   return (
     <Link href={`/profile/${data.id}`}>
-        <div className="rounded-lg border p-4">
+        <div className="rounded-lg border p-4 hover:border-gray-300 duration-200">
       <div className="grid grid-cols-2 gap-5">
         <div>
           <Image
