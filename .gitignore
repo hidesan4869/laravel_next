@@ -3,3 +3,7 @@
 !src/server/.gitkeep
 # src/front/**/*
 !src/front/.gitkeep
+
+docker-compose.yml
+docker/*
+src/front/package-lock.json
